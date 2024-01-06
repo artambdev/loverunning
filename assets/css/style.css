@@ -19,7 +19,9 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -50,7 +52,7 @@ header a {
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
 
@@ -109,7 +111,8 @@ main {
     padding-left: 10px;
 }
 
-#cover-text > h2, #cover-text > h3 {
+#cover-text>h2,
+#cover-text>h3 {
     color: #ffffff;
 }
 
@@ -126,7 +129,8 @@ main {
     margin-bottom: 20px;
 }
 
-#benefits-physical > div, #benefits-mental > div {
+#benefits-physical>div,
+#benefits-mental>div {
     line-height: 20px;
     margin-bottom: 20px;
 }
@@ -173,6 +177,7 @@ main {
 
 /* Media query: tablets and larger (768px)*/
 @media screen and (min-width: 768px) {
+
     /* Header */
     nav {
         display: block;
@@ -186,7 +191,7 @@ main {
         display: flex;
     }
 
-    #menu > li {
+    #menu>li {
         padding: 0 1rem;
     }
 
@@ -205,14 +210,60 @@ main {
         margin-top: 79px;
     }
 
+    /* Hero */
     #cover-text {
         width: 300px;
         right: 50px;
+    }
+
+    /* Reasons section */
+    #benefits-physical,
+    #benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #benefits-physical>div,
+    #benefits-mental>div {
+        width: 75%;
+    }
+
+    #benefits-mental>div {
+        text-align: end;
+        align-self: flex-end;
     }
 }
 
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #benefits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #benefits>div {
+        flex: 1;
+    }
+
+    #circle-cover-bg {
+        order: 1;
+    }
+
+    #benefits-mental {
+        order: 2;
+    }
+
+    #benefits-physical > div {
+        align-self: flex-start;
+    }
+
+    #benefits-mental > div {
+        align-self: flex-end;
     }
 }
